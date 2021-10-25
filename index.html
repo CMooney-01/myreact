@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- unpkg source for react and react dom  -->
+    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <!-- Including Babel standalone (browser based), would NOT use this for actual production -->
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <!-- Commented out text/javascript to use babel (below) -->
+    <!-- <script type="text/javascript"> -->
+    <script type="text/babel">
+      const rootElement = document.getElementById('root')
+      // Commented out the native React create element
+      // const element = React.createElement('div', {
+      //   children: ['Hello World'],
+      //   className: 'container',
+      // })
+      // Below is using JSX to create the same React element
+      const element = <div className="container">Hello World</div>
+      ReactDOM.render(element, rootElement)
+      // Javascript stuff below, React stuff above
+      // const element = document.createElement('div')
+      // element.textContent = 'Hello World'
+      // element.className = 'container'
+      // rootElement.appendChild(element)
+    </script>
+  </body>
+</html>
