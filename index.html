@@ -15,12 +15,22 @@
     <!-- Commented out text/javascript to use babel (below) -->
     <!-- <script type="text/javascript"> -->
     <script type="text/babel">
-      const rootElement = document.getElementById('root')
-      const children = 'Hello World'
-      const className = 'container'
-      const props = {children, className}
-      const element = <div id="app-root" {...props} className="not-container" />
-      ReactDOM.render(element, rootElement)
+      const element = (
+      <>
+        <span>Hello</span> <span>World</span>
+      </>
+    )
+      // Native React below, JSX above
+      // const helloElement = React.createElement('span', null, 'Hello')
+      // const worldElement = React.createElement('span', null, 'World')
+      // const element = React.createElement(
+      //   React.Fragment,
+      //   null,
+      //   helloElement,
+      //   " ",
+      //   worldElement,
+      // )
+      ReactDOM.render(element, document.getElementById("root"))
     </script>
   </body>
 </html>
