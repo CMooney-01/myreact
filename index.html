@@ -16,19 +16,11 @@
     <!-- <script type="text/javascript"> -->
     <script type="text/babel">
       const rootElement = document.getElementById('root')
-      // Commented out the native React create element
-      // const element = React.createElement('div', {
-      //   children: ['Hello World'],
-      //   className: 'container',
-      // })
-      // Below is using JSX to create the same React element
-      const element = <div className="container">Hello World</div>
+      const children = 'Hello World'
+      const className = 'container'
+      const props = {children, className}
+      const element = <div id="app-root" {...props} className="not-container" />
       ReactDOM.render(element, rootElement)
-      // Javascript stuff below, React stuff above
-      // const element = document.createElement('div')
-      // element.textContent = 'Hello World'
-      // element.className = 'container'
-      // rootElement.appendChild(element)
     </script>
   </body>
 </html>
