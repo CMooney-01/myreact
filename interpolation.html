@@ -15,13 +15,22 @@
     <!-- Commented out text/javascript to use babel (below) -->
     <!-- <script type="text/javascript"> -->
     <script type="text/babel">
-      const Message =(props) => <div className="message">{props.children}</div>
+      function CharacterCount({text}) {
+        return (
+          <div>
+            {`The text "${text}" has `}
+            {text.length ? <strong>{text.length}</strong> : 'No'}
+            {` characters`}
+          </div>
+        )
+      }
       const element = (
-      <div className="container">
-        <Message>Hello World</Message>
-        <Message>Goodbye World</Message>
-      </div>
+      <>
+        <CharacterCount text="Hello World" />
+        <CharacterCount text="" />
+      </>
       )
+
       ReactDOM.render(element, document.getElementById("root"))
     </script>
   </body>
