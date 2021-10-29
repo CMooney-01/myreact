@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- unpkg source for react and react dom  -->
+    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <!-- Including Babel standalone (browser based), would NOT use this for actual production -->
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <!-- Commented out text/javascript to use babel (below) -->
+    <!-- <script type="text/javascript"> -->
+    <script type="text/babel">
+      const rootElement = document.getElementById('root')
+
+      function tick() {
+        const time = new Date().toLocaleTimeString()
+        const element =
+        <div>
+          <div>The time is: </div>
+          {time}
+        </div>
+
+        ReactDOM.render(element, rootElement)
+      }
+
+      tick()
+      setInterval(tick, 1000)
+
+    </script>
+  </body>
+</html>
