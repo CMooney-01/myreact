@@ -41,6 +41,9 @@
         if (status === 'resolved') {
           return <pre>{JSON.stringify(pokemon, null, 2)}</pre>
         }
+        if (status === 'rejected') {
+          return "Oh no..."
+        }
       }
 
       function App() {
